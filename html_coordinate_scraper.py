@@ -1,6 +1,8 @@
 import numpy
 import csv
-
+"""
+Scraping 2500 crisis pregnancy center names and locations from the html for https://crisispregnancycentermap.com/
+"""
 def parse_file(filename):
 	"""
 		Within each line look for title:, lat:, lng:
