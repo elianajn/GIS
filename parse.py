@@ -6,26 +6,26 @@ def parse_file(filename):
 		Within each line look for title:, lat:, lng:
 		Append each as a row in the array
 	"""
-	arr = []
+	arr = [] #each index is a name and location
 	n = 0
 	name = ''
 	lat = ''
 	lng = ''
 	with open(filename) as file_object:
 		for line in file_object:
-			if 'title\":' in line:
+			if 'title\":' in line: #if it finds 'title:' 
 				name = line.split(":")[-1]
 				name = name.replace('"','')
 				name = name.replace(',','')
-			if 'lat\":' in line:
+				line = next(file_object) #grabs next line
 				lat = line.split(":")[-1]
 				lat = lat.replace('"','')
 				lat = lat.replace(',','')
-			if 'lng\":' in line:
+				line = next(file_object) #grabs next line
 				lng = line.split(":")[-1]
 				lng = lng.replace('"','')
 				lng = lng.replace(',','')
-				n += 1
+				n += 1 #counts the number of entries
 				arr.append([name, lat, lng])
 		return arr
 
