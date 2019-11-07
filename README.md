@@ -1,6 +1,5 @@
-## GIS_Lab
-# To use HTML Parser
-	1. Copy HTML
-	2. Edit file path and run parser
-	3. CSV should be on desktop
+# GIS Lab
+## Mostly parsers used to scrape coordinate and statistical data scraped from page sources. Compiled for various 
+## senior theses projects. 
+
 dope, nice job. you're so smart 
